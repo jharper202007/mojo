@@ -1,8 +1,49 @@
 {
   "buildings": [
     {
-      "id": "1",
-      "name": "test"
+      "name": "Bauhaus Archive",
+      "image": "https://static.dezeen.com/uploads/2018/11/bauhaus-berlin-archiv-100-years-architecture_dezeen_2364_sq5.jpg",
+      "address": {
+        "line1": "7246 Woodland Rd.",
+        "line2": "Waukesha, WI 53186"
+      },
+      "users": 906,
+      "offices": 36,
+      "rent": 75
+    },
+    {
+      "name": "Lotus Temple",
+      "image": "https://images.indianexpress.com/2019/06/lotus-temple.jpg",
+      "address": {
+        "line1": "164 S. Carson Court",
+        "line2": "Newport News, VA 23601"
+      },
+      "users": 876,
+      "offices": 20,
+      "rent": 65
+    },
+    {
+      "name": "Dome of the Rock",
+      "image": "https://cdn.kastatic.org/ka-perseus-images/f664f86c24b814659853fd64d252e0568f5196b5.jpg",
+      "address": {
+        "line1": "123 Johnson Court",
+        "line2": "Roy, UT 84067"
+      },
+      "users": 564,
+      "offices": 46,
+      "rent": 96
+    },
+
+    {
+      "name": "Lloyd's Building",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lloyds_building_taken_2011.jpg",
+      "address": {
+        "line1": "36 Squaw Creek Dr.",
+        "line2": "Harleysville, PA 19438"
+      },
+      "users": 466,
+      "offices": 120,
+      "rent": 120
     }
   ]
 }
