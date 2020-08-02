@@ -1,0 +1,8 @@
+div.App {
+  display: flex;
+}
+
+div.main {
+  display: flex;
+  padding: 28px 0 0 30px;
+}
