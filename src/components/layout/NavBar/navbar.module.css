@@ -10,13 +10,25 @@
   z-index: 1000;
 }
 
-.sub_menu {
+.sub_menu,
+.title_container {
   padding: 0 10px;
 }
 
 .sub_menu ul {
   padding: 0;
   margin-top: 9px;
+}
+
+.title_icon {
+  margin-right: 12px;
+}
+
+.main_title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 24px;
+  padding: 9px 16px;
 }
 
 .menu_title {
