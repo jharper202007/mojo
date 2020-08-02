@@ -22,7 +22,7 @@ export default function reducer(state = initialState, action) {
       return {
         isLoading: false,
         error: null,
-        building: action.payload
+        buildings: action.payload
       };
     }
     case LOAD_BUILDINGS_ERROR: {

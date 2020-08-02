@@ -1,7 +1,5 @@
-import axios from 'axios';
-
-axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-const API_BASE_PATH = process.env.API_BASE_PATH || 'http://localhost:8000';
+// Can fallback to nothing because 'proxy' is set in package.json
+const API_BASE_PATH = process.env.API_BASE_PATH || '';
 const LOAD_BUILDINGS_API_PATH = `${API_BASE_PATH}/buildings`;
 
 // Load buildings action name constants
@@ -35,9 +33,10 @@ export const loadBuildings = () => async (dispatch) => {
   );
 
   try {
-    const result = await axios.get(LOAD_BUILDINGS_API_PATH);
+    const result = await fetch(LOAD_BUILDINGS_API_PATH);
+    const json = await result.json();
     dispatch(
-      loadBuildingsActions.success(result)
+      loadBuildingsActions.success(json.buildings)
     );
   } catch (err) {
     dispatch(
