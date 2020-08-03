@@ -1,16 +1,8 @@
 .topbar {
   position: absolute;
   top: 0;
-  left: 270px;
   margin: 0;
-  /* Firefox */
-  width: -moz-calc(100% - 270px);
-  /* WebKit */
-  width: -webkit-calc(100% - 270px);
-  /* Opera */
-  width: -o-calc(100% - 270px);
-  /* Standard */
-  width: calc(100% - 270px);
+  width: 100%;
   max-height: 85px;
   min-height: 85px;
   border-bottom: 1px solid rgba(204,204,204, 0.6);
@@ -23,7 +15,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  padding-left: 30px;
+  padding-left: 300px;
 }
 
 .topbar_right {
@@ -60,6 +52,10 @@
   border: 1px solid #ced4da;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form_control::placeholder {
+  color: #CCCCCC;
 }
 
 .form_control:focus {

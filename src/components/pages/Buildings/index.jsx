@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { loadBuildings } from '../../../actions/buildings';
-import TopBar from '../../layout/TopBar';
+import Page from '../../pages/Page';
 import BuildingList from './BuildingList';
 import buildingsSelector from './selector';
+import styles from './buildings.module.css';
 
 const BuildingsPage = () => {
   const dispatch = useDispatch();
@@ -16,18 +17,27 @@ const BuildingsPage = () => {
     }
   }, [buildings, dispatch]);
 
-  console.log(buildings);
-
   return (
-    <div>
-      <TopBar title="All Buildings" />
-      {isLoading && (<div>Loading buildings...</div>)}
-      {!isLoading && (
-        <div>
-          <BuildingList buildings={buildings} />
-        </div>
-      )}
-    </div>
+    <Page title='All Buildings'>
+      <div className={styles.container}>
+        {isLoading && (<div>Loading buildings...</div>)}
+        {!isLoading && (
+          <div className={styles.container}>
+            <div className={styles.list_container}>
+              <div className={styles.subtitle}>{buildings.length} Buildings</div>
+              <BuildingList buildings={buildings} />
+            </div>
+            <div className={styles.map_container}>
+              <img
+                src='https://www.google.com/maps/d/thumbnail?mid=1yJFj8sZlnVZhViVOtzqUMcasGuU&hl=en'
+                alt='map preview'
+                className={styles.map_preview}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    </Page>
   );
 }
 

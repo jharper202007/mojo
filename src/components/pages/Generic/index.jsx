@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from "react-router-dom";
 
 import navigation from '../../../data/navigation';
-import TopBar from './../../layout/TopBar';
+import Page from '../Page';
 
 function getTitle(path) {
   const allItems = Object.values(navigation)
@@ -15,13 +15,12 @@ function getTitle(path) {
 
 const GenericPage = () => {
   const location = useLocation();
-
   const title = getTitle(location.pathname);
+
   return (
-    <div>
-    <TopBar title={title} />
+    <Page title={title}>
       {title} Page
-    </div>
+    </Page>
   );
 }
 
