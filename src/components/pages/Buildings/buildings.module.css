@@ -1,0 +1,74 @@
+.buildings_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.building_item {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #CCC; */
+  margin: 10px;
+}
+
+.building_item img.building_img {
+  width: 255px;
+  height: 200px;
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+.building_item .building_name {
+  color: #3e3f42;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.building_item .address,
+.building_item .details {
+  color: #9ea0a5;
+  font-size: 14px;
+  margin-top: 5px;
+  line-height: 22px;
+  font-family: 'Roboto-Regular', 'Roboto', sans-serif;
+}
+
+.building_item .details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eaedf3;
+}
+
+.building_item .details i {
+  margin-right: 5px;
+}
+
+.building_item .details .users,
+.building_item .details .offices  {
+  width: 50%;
+}
+
+.building_item .rent_container {
+  margin-top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rent_container .rent_label {
+  color: #1665d8;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: 'Roboto-Regular', 'Roboto', sans-serif;
+}
+
+.rent_container .rent_price {
+  color: #3e3f42;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+}

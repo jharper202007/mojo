@@ -3,15 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { loadBuildings } from '../../../actions/buildings';
 import TopBar from '../../layout/TopBar';
-
+import BuildingList from './BuildingList';
+import buildingsSelector from './selector';
 
 const BuildingsPage = () => {
   const dispatch = useDispatch();
-  const { buildings, isLoading } = useSelector(state => state);
+  const { buildings, isLoading } = useSelector(buildingsSelector);
 
   useEffect(() => {
-    dispatch(loadBuildings());
-  }, [dispatch]);
+    if (!buildings.length) {
+      dispatch(loadBuildings());
+    }
+  }, [buildings, dispatch]);
 
   console.log(buildings);
 
@@ -21,7 +24,7 @@ const BuildingsPage = () => {
       {isLoading && (<div>Loading buildings...</div>)}
       {!isLoading && (
         <div>
-          Buildings listing page
+          <BuildingList buildings={buildings} />
         </div>
       )}
     </div>
