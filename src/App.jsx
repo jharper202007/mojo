@@ -24,6 +24,7 @@ function App() {
             {/* fallback route to catch anything else */}
             <Route path="/">
               <GenericPage />
+              <span className="flag-icon flag-icon-gr" />
             </Route>
           </Switch>
         </div>
