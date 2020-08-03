@@ -19,7 +19,7 @@ const BuildingsPage = () => {
   }, [buildings, dispatch]);
 
   return (
-    <Page title='All Buildings'>
+    <Page title='All Buildings' isListPage={true}>
       <div className={styles.container}>
         {isLoading && (<div>Loading buildings...</div>)}
         {!isLoading && (

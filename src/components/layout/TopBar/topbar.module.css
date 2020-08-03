@@ -10,6 +10,10 @@
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
+
+  .title_icon {
+    margin-left: 10px !important;
+  }
 }
 
 .topbar {
@@ -30,6 +34,13 @@
   font-size: 16px;
   line-height: 24px;
   padding-left: 300px;
+}
+
+.title_icon {
+  color: #9ea0a5;
+  opacity: 0.6;
+  font-size: 12px;
+  margin-left: 30px;
 }
 
 .topbar_right {
