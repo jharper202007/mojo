@@ -1,3 +1,28 @@
+@media only screen and (max-width: 768px) {
+  .map_container {
+    display: none;
+  }
+
+  .list_container,
+  .building_item img.building_img {
+    width: 100% !important;
+  }
+
+  .building_item {
+    text-align: center;
+    border: 1px solid #DDD;
+    padding: 10px;
+  }
+
+  .building_item .details {
+    flex-direction: column;
+  }
+
+  .buildings_container {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -19,9 +44,11 @@
 }
 
 .options_container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .view_selector {
@@ -49,7 +76,6 @@
   font-size: 18px;
   color: #3e3f42;
   font-weight: 600;
-  margin-bottom: 14px;
 }
 
 .building_item {
