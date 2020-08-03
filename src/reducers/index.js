@@ -7,6 +7,10 @@ import {
 const initialState = {
   buildings: [],
   isLoading: false,
+  notificationCounts: {
+    conversations: 2,
+    posts: 0
+  },
   error: null
 };
 
@@ -20,6 +24,7 @@ export default function reducer(state = initialState, action) {
     }
     case LOAD_BUILDINGS_SUCCESS: {
       return {
+        ...state,
         isLoading: false,
         error: null,
         buildings: action.payload

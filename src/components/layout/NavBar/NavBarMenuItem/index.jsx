@@ -1,19 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 import NavBarItemCount from './../NavBarItemCount';
 import styles from '../navbar.module.css';
 
-const itemCounts = {
-  conversations: 2
-};
-
 const NavBarMenuItem = ({ title, link }) => {
-  const count = itemCounts[title.toLowerCase()];
+  const itemCounts = useSelector(state => state.notificationCounts);
+  const count = itemCounts ? itemCounts[title.toLowerCase()] : 0;
   return (
     <NavLink to={link} exact className={styles.nav_item} activeClassName={styles.active}>
       <li>
-        {title} {count && <NavBarItemCount count={count} />}
+        {title} {(count > 0) && <NavBarItemCount count={count} />}
       </li>
     </NavLink>
   );
