@@ -19,7 +19,7 @@
 }
 
 .topbar_right {
-  margin-right: 50px;
+  margin-right: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,36 +32,6 @@
 }
 
 .lang_selector {
-  margin: 0 25px;
+  margin: 0 30px;
 }
 
-.search_container {
-  margin-right: 50px;
-  width: 400px;
-}
-
-.form_control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.form_control::placeholder {
-  color: #CCCCCC;
-}
-
-.form_control:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}

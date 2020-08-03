@@ -2,6 +2,7 @@ import React from 'react';
 import flags from 'emoji-flags';
 
 import styles from '../topbar.module.css';
+import formStyles from '../../../common/forms.module.css';
 
 const languages = [
   {label: 'ENG', flag: flags.GB, 'description': 'English'},
@@ -12,7 +13,7 @@ const languages = [
 const LanguageSelector = () => {
   return (
     <div className={styles.lang_container}>
-      <select className={`${styles.lang_selector} ${styles.form_control}`}>
+      <select className={`${styles.lang_selector} ${formStyles.form_control}`}>
         {languages.map(lang => (
           <option value={lang.label} key={lang.description}>
             {/* lang.flag.emoji */} {lang.label}

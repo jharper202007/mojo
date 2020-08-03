@@ -6,6 +6,7 @@ import Page from '../../pages/Page';
 import BuildingList from './BuildingList';
 import buildingsSelector from './selector';
 import styles from './buildings.module.css';
+import ViewSelector from './ViewSelector';
 
 const BuildingsPage = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,10 @@ const BuildingsPage = () => {
         {!isLoading && (
           <div className={styles.container}>
             <div className={styles.list_container}>
-              <div className={styles.subtitle}>{buildings.length} Buildings</div>
+              <div className={styles.options_container}>
+                <div className={styles.subtitle}>{buildings.length} Buildings</div>
+                <ViewSelector />
+              </div>
               <BuildingList buildings={buildings} />
             </div>
             <div className={styles.map_container}>

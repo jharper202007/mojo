@@ -1,0 +1,16 @@
+.search_container {
+  margin-right: 18px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search_container .icon_container {
+  color: #9ea0a5;
+  opacity: 0.6;
+  padding-right: 0;
+  position: relative;
+  right: 30px;
+  cursor: pointer;
+}

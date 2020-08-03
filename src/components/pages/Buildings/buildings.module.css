@@ -18,6 +18,33 @@
   grid-gap: 30px;
 }
 
+.options_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view_selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view_selector .icon {
+  padding-right: 12px;
+  margin-right: 12px;
+  color: #cecfd2;
+  cursor: pointer;
+}
+
+.view_selector .icon:not(:last-child) {
+  border-right: 1px solid rgba(204,204,204, 0.6);
+}
+
+.view_selector .icon.selected {
+  color: #1665d8;
+}
+
 .subtitle {
   font-size: 18px;
   color: #3e3f42;
@@ -83,7 +110,6 @@
   font-size: 14px;
   line-height: 22px;
   font-weight: 500;
-  font-family: 'Roboto-Regular', 'Roboto', sans-serif;
 }
 
 .rent_container .rent_price {
