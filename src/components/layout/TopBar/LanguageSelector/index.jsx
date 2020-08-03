@@ -12,11 +12,10 @@ const languages = [
 const LanguageSelector = () => {
   return (
     <div className={styles.lang_container}>
-    <span class="flag-icon flag-icon-gr" />
       <select className={`${styles.lang_selector} ${styles.form_control}`}>
         {languages.map(lang => (
           <option value={lang.label} key={lang.description}>
-            {lang.flag.emoji} {lang.label}
+            {/* lang.flag.emoji */} {lang.label}
           </option>
         ))}
       </select>
