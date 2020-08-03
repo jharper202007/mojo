@@ -53,6 +53,9 @@
 }
 
 .nav_item li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #ffffff;
   max-height: 40px;
   padding: 9px 16px;
@@ -67,4 +70,15 @@
   border-top: 1px solid #252529;
   opacity: 0.1;
   margin: 0 14px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  color: #3e3f42;
+  line-height: 20px;
+  text-align: center;
+  background: #ffffff;
 }
