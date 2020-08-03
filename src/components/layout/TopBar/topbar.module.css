@@ -1,3 +1,17 @@
+@value mobile from '../breakpoints.module.css';
+
+@media only screen and (mobile) {
+  .topbar {
+    position: relative !important;
+    width: 100%;
+  }
+
+  .topbar_title {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
 .topbar {
   position: absolute;
   top: 0;

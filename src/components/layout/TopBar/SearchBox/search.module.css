@@ -1,5 +1,14 @@
+@value mobile from '../../breakpoints.module.css';
+
+@media only screen and (mobile) {
+  .search_container {
+    border-left: 1px solid rgba(204,204,204, 0.6);
+  }
+}
+
 .search_container {
   margin-right: 18px;
+  padding-left: 30px;
   width: 300px;
   display: flex;
   flex-direction: row;
