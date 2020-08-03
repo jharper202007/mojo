@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { loadBuildings } from '../../../actions/buildings';
+import TopBar from '../../layout/TopBar';
+
 
 const BuildingsPage = () => {
   const dispatch = useDispatch();
@@ -13,15 +15,15 @@ const BuildingsPage = () => {
 
   console.log(buildings);
 
-  if (isLoading) {
-    return (
-      <div>Loading buildings...</div>
-    );
-  }
-
   return (
     <div>
-      Buildings listing Page
+      <TopBar title="All Buildings" />
+      {isLoading && (<div>Loading buildings...</div>)}
+      {!isLoading && (
+        <div>
+          Buildings listing page
+        </div>
+      )}
     </div>
   );
 }
